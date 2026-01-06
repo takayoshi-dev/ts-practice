@@ -5,11 +5,12 @@ const reversedArray = (arr: string[], hasOption?: boolean): string[] => {
     resultArr[arr.length - (index + 1)] = value;
   });
 
-  if (hasOption) {
+  console.log("hasOption = " + hasOption);
+  if (hasOption === true) {
     resultArr.push("test");
   }
 
   return resultArr;
 };
 
-console.log(reversedArray(["a", "b", "c"], true));
+console.log(reversedArray(["a", "b", "c"], false));
