@@ -1,15 +1,10 @@
 const reversedArray = (arr: string[]): string[] => {
   const resultArr: string[] = [];
-  let index: number = arr.length - 1;
 
-  while (index >= 0) {
-    const value: string | undefined = arr[index];
-    if (typeof value == "string") {
-      resultArr.push(value);
-    }
+  arr.forEach((value, index) => {
+    resultArr[arr.length - (index + 1)] = value;
+  });
 
-    index--;
-  }
   return resultArr;
 };
 
