@@ -11,8 +11,8 @@ TypeScript学習用
 
 ## コマンド
 
-### コンテナ作成
-docker create -it --name ts-practice -v "$PWD":/app -w /app node:lts-trixie-slim bash
+### コンテナ作成して起動
+docker run -it --name ts-practice -v "$PWD":/app -w /app --user "$(id -u)":"$(id -g)"　node:lts-trixie-slim bash
 
 ### コンテナ内に入る
 docker start -ai ts-practice
